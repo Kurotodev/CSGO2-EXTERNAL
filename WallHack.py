@@ -99,8 +99,8 @@ class ESPOverlay(QWidget):
             print("ESP disabled")
 
 def get_offsets():
-    offsets = requests.get('https://raw.githubusercontent.com/a2x/cs2-dumper/main/output/offsets.json').json()
-    client_dll = requests.get('https://raw.githubusercontent.com/a2x/cs2-dumper/main/output/client_dll.json').json()
+    offsets = requests.get('https://raw.githubusercontent.com/a2x/cs2-dumper/main/output/offsets.json').json() #Offsets data
+    client_dll = requests.get('https://raw.githubusercontent.com/a2x/cs2-dumper/main/output/client_dll.json').json() #Offsets client game
     return offsets, client_dll
 
 def get_window_info():
@@ -329,4 +329,5 @@ def main():
     sys.exit(app.exec())
 
 if __name__ == "__main__":
+
     main()
